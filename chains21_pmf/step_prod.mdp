@@ -1,0 +1,48 @@
+;;;define                  = -DREST_ON_glycan -DSTEP1
+integrator               = md
+dt                       = 0.01 ;; 0.02  
+nsteps                   = 20000000;  200 ns
+nstcomm                  = 100
+comm-grps		 = System
+;
+nstlog                   = 5000
+nstenergy                = 1000
+nstxout-compressed       = 5000
+compressed-x-precision   = 100
+compressed-x-grps        = glycan
+;
+cutoff-scheme            = Verlet
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+;
+coulombtype              = reaction-field 
+rcoulomb                 = 1.1
+epsilon_r                = 15	; 2.5 (with polarizable water)
+epsilon_rf               = 0
+vdw_type                 = cutoff  
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1
+;
+tcoupl                   = v-rescale 
+tc-grps                  = system
+tau_t                    = 1.0   
+ref_t                    = 310 
+;
+Pcoupl                   = Parrinello-Rahman
+Pcoupltype               = isotropic 
+tau_p                    = 12.0    
+compressibility          = 4.5e-4   
+ref_p                    = 1.0   
+;
+continuation             = yes
+;gen_vel                  = yes
+;gen_temp                 = 310
+;gen_seed                 = 473529
+;
+constraints              = none 
+constraint_algorithm     = Lincs
+;
+periodic-molecules       = yes
+refcoord_scaling        = com
