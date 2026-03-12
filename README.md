@@ -1,4 +1,4 @@
-This project repository contains gromacs itp/gro/forcefield files for model peptidoglycan in MARTINI-2 framework.
+This project repository contains gromacs itp/gro/forcefield files for Gram-negative Escherichia coli model peptidoglycan in MARTINI-2 framework.
 This peptidoglycan model has been developed by Dr. Rakesh K. Vaiwala and jointly published by 
 Rakesh Vaiwala, Pradyumn Sharma, Mrinalini Puranik, and K. Ganapathy Ayappa in JCTC. 
 https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.0c00539
